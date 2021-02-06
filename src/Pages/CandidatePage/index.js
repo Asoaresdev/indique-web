@@ -1,5 +1,10 @@
 import React from "react";
+import { SignUpForm } from "./SignUpForm";
+import {ContainerPageCandidate} from './style'
 
 export default function CandidatePage() {
-  return <div>CandidatePage</div>;
+  return <ContainerPageCandidate>
+    <SignUpForm />
+    
+    </ContainerPageCandidate>;
 }
