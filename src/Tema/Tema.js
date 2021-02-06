@@ -2,12 +2,19 @@ import React from "react";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 const theme = createMuiTheme({
+  typography: {
+    fontFamily: "Lato",
+  },
   palette: {
     primary: {
-      main: "#e8222e",
+      main: "#FFB800",
     },
-    secondary: {
-      main: "#ff6158",
+  },
+  overrides: {
+    MuiButton: {
+      label: {
+        textTransform: "initial",
+      },
     },
   },
 });
