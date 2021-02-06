@@ -2,7 +2,6 @@ import React from "react";
 import { Grid, Typography, Button } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 
-import FormLogin from "../../Components/FormLogin";
 import { useStyles } from "./style";
 import {
   goToCandidate,

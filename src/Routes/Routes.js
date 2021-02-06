@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import SelectPage from "../Pages/SelectPage";
 import CandidatePage from "../Pages/CandidatePage";
 import CompanyPage from "../Pages/CompanyPage";
-import { useHistory } from "react-router-dom";
 
 export default function Routes() {
   return (
@@ -18,6 +17,9 @@ export default function Routes() {
         </Route>
 
         <Route exact path="/company">
+          <CompanyPage />
+        </Route>
+        <Route exact path="/mentor">
           <CompanyPage />
         </Route>
       </Switch>
