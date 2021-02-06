@@ -7,23 +7,27 @@ import GlobalStateContext from "../../Global/GlobalStateContext";
 
 import { useStyles } from "./style";
 
-export const SignUpForm = () => {
+export const ExperienceForm = () => {
   const classes = useStyles();
   const { states, setters } = useContext(GlobalStateContext);
+  console.log(states);
 
   //esperar API ficar pronta para nomear os inputs
   const [form, handleInput] = useForm({
-    name: undefined,
-    email: undefined,
-    phone: undefined,
-    about: undefined,
+    escolaridade: undefined,
+    instituicao: undefined,
+    curso: undefined,
+    area: undefined,
   });
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
 
   const submitForm = (e) => {
     e.preventDefault();
-    setters.setCandidato(form);
+    setters.setCandidato({
+      ...states.candidato,
+      ...form,
+    });
   };
 
   return (
@@ -33,10 +37,10 @@ export const SignUpForm = () => {
           <TextField
             required
             autoFocus
-            value={form.name}
+            value={form.escolaridade}
             onChange={handleInput}
-            name="name"
-            label="Nome completo"
+            name="escolaridade"
+            label="Qual seu grau de escolaridade?"
             variant="outlined"
             type="text"
             fullWidth
@@ -46,41 +50,37 @@ export const SignUpForm = () => {
         <div>
           <TextField
             required
-            value={form.email}
+            value={form.instituicao}
             onChange={handleInput}
-            name="email"
-            label="Email"
-            placeholder="email@email.com."
-            variant="outlined"
-            type="email"
-            fullWidth
-            className={classes.textField}
-          />
-        </div>
-        <div>
-          <TextField
-            required
-            value={form.phone}
-            onChange={handleInput}
-            name="phone"
-            label="Qual o seu melhor telefone para contato?"
-            inputProps={{ pattern: "[0-9]{3}.?[0-9]{3}.?[0-9]{3}-?[0-9]{2}" }}
-            variant="outlined"
-            fullWidth
-            className={classes.textField}
-          />
-        </div>
-        <div>
-          <TextField
-            required
-            value={form.about}
-            onChange={handleInput}
-            name="about"
-            label="Fale um pouco sobre você? O que você está buscando para sua próxima experiência profissional?"
+            name="instituicao"
+            label="Instituição"
+            placeholder="Onde você estudou?"
             variant="outlined"
             type="text"
-            multiline
-            rows={5}
+            fullWidth
+            className={classes.textField}
+          />
+        </div>
+        <div>
+          <TextField
+            required
+            value={form.curso}
+            onChange={handleInput}
+            name="curso"
+            label="Possui algum curso profissionalizante? Se sim, qual?"
+            variant="outlined"
+            fullWidth
+            className={classes.textField}
+          />
+
+          <TextField
+            required
+            value={form.area}
+            onChange={handleInput}
+            name="area"
+            label="Tem vontade de se profissionalizar em alguma área? Qual?"
+            variant="outlined"
+            type="text"
             fullWidth
             className={classes.textField}
           />
@@ -90,7 +90,7 @@ export const SignUpForm = () => {
             {isLoading ? (
               <CircularProgress size={24} color={"inherit"} />
             ) : (
-              "Enviar"
+              "Pronto!"
             )}
           </Button>
         </div>
