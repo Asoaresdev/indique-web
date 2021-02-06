@@ -1,15 +1,28 @@
 import React from "react";
 import { Grid, Typography, Button } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
 
 import FormLogin from "../../Components/FormLogin";
 import { useStyles } from "./style";
+import {
+  goToCandidate,
+  goToCompany,
+  goToMentor,
+} from "../../Routes/coordinators";
 
 export default function SelectPage() {
   const classes = useStyles();
+  const history = useHistory();
 
-  const handleClickIndicado = () => {};
-  const handleClickIndicar = () => {};
-  const handleClickContratar = () => {};
+  const handleClickIndicado = () => {
+    goToCandidate(history);
+  };
+  const handleClickIndicar = () => {
+    goToMentor(history);
+  };
+  const handleClickContratar = () => {
+    goToCompany(history);
+  };
 
   return (
     <Grid container className={classes.root}>

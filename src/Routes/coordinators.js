@@ -1,41 +1,13 @@
-export const goToHomePage = (history) => {
-  history.push("/feed");
+export const goToCandidate = (history) => {
+  history.push("/candidate");
 };
 
-export const goToAddAddressPage = (history) => {
-  history.push("/profile/add-address");
+export const goToMentor = (history) => {
+  history.push("/mentor");
 };
 
-export const goToCartPage = (history) => {
-  history.push("/cart");
-};
-
-export const goToEditPage = (history) => {
-  history.push("/profile/edit");
-};
-
-export const goToEditAddressPage = (history) => {
-  history.push("/profile/edit/address");
-};
-
-export const goToLoginPage = (history) => {
-  history.push("/");
-};
-
-export const goToProfilePage = (history) => {
-  history.push("/profile");
-};
-
-export const goToRestaurantsPage = (history, id) => {
-  history.push(`/restaurants/${id}`);
-};
-
-export const goToSignUpPage = (history) => {
-  history.push("/sign-up");
-};
-
-export const goToSearchPage = (history) => {
-  history.push("/search");
+export const goToCompany = (history) => {
+  history.push("/company");
 };
 
 export const goBack = (history) => {

@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import SelectPage from "../Pages/SelectPage";
 import CandidatePage from "../Pages/CandidatePage";
 import CompanyPage from "../Pages/CompanyPage";
+import { useHistory } from "react-router-dom";
 
 export default function Routes() {
   return (
