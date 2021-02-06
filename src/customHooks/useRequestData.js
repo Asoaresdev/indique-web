@@ -1,21 +1,22 @@
-import axios from 'axios'
-import React from 'react'
+import axios from "axios";
+import React from "react";
 
-//fazer requisição na API 
+//fazer requisição na API
 const useRequestData = (url, initialState) => {
-    const [data, setData] = React.useState(initialState)
-    
-    React.useEffect(() => {
-       axios.get(url)
-       .then((response) => {
-           setData(response.data)
-       })
-       .catch((error) => {
-           alert(error)
-       })
-    }, [url])
+  const [data, setData] = React.useState(initialState);
 
-    return data
-}
+  React.useEffect(() => {
+    axios
+      .get(url)
+      .then((response) => {
+        setData(response.data);
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  }, [url]);
 
-export default useRequestData
+  return data;
+};
+
+export default useRequestData;

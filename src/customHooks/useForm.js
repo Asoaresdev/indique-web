@@ -1,24 +1,23 @@
-import React from 'react'
+import React from "react";
 
-
-//controlar inputs 
+//controlar inputs
 const useForm = (initialState) => {
-    const [form, setForm] = React.useState(initialState)
+  const [form, setForm] = React.useState(initialState);
 
-    const handleInputChange = (event) => {
-        const { value, name } = event.target
-        setForm ({ ...form, [name]: value })
-    }
+  const handleInputChange = (event) => {
+    const { value, name } = event.targe;
+    setForm({ ...form, [name]: value });
+  };
 
-    const resetState = () => {
-        setForm(initialState)
-    }
+  const resetState = () => {
+    setForm(initialState);
+  };
 
-    const handleFormErrors = (errors) => {
-        setForm ({ ...form, errors })
-    }
+  const handleFormErrors = (errors) => {
+    setForm({ ...form, errors });
+  };
 
-    return [form, handleInputChange, resetState, handleFormErrors]
-}
+  return [form, handleInputChange, resetState, handleFormErrors];
+};
 
-export default useForm
+export default useForm;

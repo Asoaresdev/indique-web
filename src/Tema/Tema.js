@@ -8,12 +8,18 @@ const theme = createMuiTheme({
   palette: {
     primary: {
       main: "#FFB800",
+      contrastText: "#fff",
     },
   },
   overrides: {
     MuiButton: {
       label: {
         textTransform: "initial",
+      },
+    },
+    MuiOutlinedInput: {
+      root: {
+        borderRadius: "35px",
       },
     },
   },
