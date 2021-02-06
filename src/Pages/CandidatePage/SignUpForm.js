@@ -115,6 +115,18 @@ export const SignUpForm = () => {
                 <div>
                     <TextField
                         required
+                        value={form.city}
+                        //   onChange={handleInput}
+                        name="city"
+                        label="Cidade."
+                        placeholder="Cidade"
+                        variant="outlined"
+                        type="text"
+                />
+                </div>
+                <div>
+                    <TextField
+                        required
                         value={form.state}
                         //   onChange={handleInput}
                         name= "state"
@@ -124,18 +136,7 @@ export const SignUpForm = () => {
                         type="text"
                 />
                 </div>
-                <div>
-                    <TextField
-                        required
-                        value={form.neighbourhood}
-                        //   onChange={handleInput}
-                        name="neighbourhood"
-                        label="Bairro."
-                        placeholder="Bairro"
-                        variant="outlined"
-                        type="text"
-                />
-                </div>
+               
                 <Button 
                 type = "submit"
                 variant = "contained"
