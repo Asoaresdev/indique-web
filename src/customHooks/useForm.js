@@ -6,7 +6,7 @@ const useForm = (initialState) => {
     const [form, setForm] = React.useState(initialState)
 
     const handleInputChange = (event) => {
-        const { value, name } = event.targe
+        const { value, name } = event.target
         setForm ({ ...form, [name]: value })
     }
 

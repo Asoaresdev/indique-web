@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import TextField from '@material-ui/core/TextField'
-import { Button, CircularProgress, InputAdornment, IconButton } from '@material-ui/core'
+import { Button, CircularProgress, IconButton, InputAdornment } from '@material-ui/core'
 import useForm from '../../customHooks/useForm'
 import { useHistory } from 'react-router-dom'
 import Visibility from '@material-ui/icons/Visibility';
@@ -46,7 +46,7 @@ export default function SignUpForm () {
                         //   onChange={handleInput}
                         name="name"
                         label="Nome"
-                        placeholder="Nome e sobrenome"
+                        placeholder="Nome da Empresa"
                         variant="outlined"
                         type="text"
                 />
@@ -76,18 +76,6 @@ export default function SignUpForm () {
                 />
                 </div>
                 <div>
-                    <TextField
-                        id="outlined-multiline-flexible"
-                        label="Sobre você"
-                        multiline
-                        rowsMax={4}
-                        placeholder = "Fale um pouco sobre você"
-                        value={form.description}
-                        //   onChange={handleChange}
-                        variant="outlined"
-                    />
-                </div>
-                <div>
                 <TextField
                             required
                             value={form.password || undefined}
@@ -114,6 +102,7 @@ export default function SignUpForm () {
                             }}
                         />
                 </div>
+                
                 <Button 
                 type = "submit"
                 variant = "contained"
