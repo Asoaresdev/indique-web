@@ -19,6 +19,9 @@ export default function Routes() {
         <Route exact path="/company">
           <CompanyPage />
         </Route>
+        <Route exact path="/mentor">
+          <CompanyPage />
+        </Route>
       </Switch>
     </BrowserRouter>
   );
