@@ -58,7 +58,7 @@ export const SignUpForm = () => {
                         value={form.cpf}
                         //   onChange={handleInput}
                         name="cpf"
-                        label="CPF/Av."
+                        label="CPF"
                         inputProps={{ pattern: "[0-9]{3}\.?[0-9]{3}\.?[0-9]{3}\-?[0-9]{2}" }}
                         placeholder="Rua/000.000.000-00"
                         variant="outlined"
