@@ -3,42 +3,21 @@ import GlobalStateContext from "../Global/GlobalStateContext";
 import { useState, useEffect } from "react";
 
 export default function GlobalState(props) {
-  const [carrinho, setCarrinho] = useState({});
-  const [perfil, setPerfil] = useState({});
-  const [restaurante, setRestaurante] = useState({});
-  const [listaRestaurantes, setListaRestaurantes] = useState([]);
+  const [candidato, setCandidato] = useState({});
+  const [mentor, setMentor] = useState({});
+  const [company, setCompany] = useState([]);
   // const [token, setToken] = useState("")
-  const [searchInput, setSearchInput] = useState(
-    ""
-  ); /* Controla input da barra de pesquisa */
-  const [filter, setFilter] = useState(
-    ""
-  ); /* Controla o filtro do menu do feed */
-  const [popUp, setPopUp] = useState(false);
-  const [quantidade, setQuantidade] = useState(0);
-  const [idPedido, setIdPedido] = useState("");
 
   const states = {
-    carrinho,
-    perfil,
-    restaurante,
-    listaRestaurantes,
-    searchInput,
-    filter,
-    popUp,
-    quantidade,
-    idPedido,
+    candidato,
+    mentor,
+    company,
   };
+
   const setters = {
-    setCarrinho,
-    setPerfil,
-    setRestaurante,
-    setListaRestaurantes,
-    setSearchInput,
-    setFilter,
-    setPopUp,
-    setQuantidade,
-    setIdPedido,
+    setCandidato,
+    setMentor,
+    setCompany,
   };
   const requests = {};
 

@@ -1,19 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Grid, Typography, Badge } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
+import GlobalStateContext from "../../Global/GlobalStateContext";
 
 import { SignUpForm } from "./SignUpForm";
+import { ExperienceForm } from "./ExperienceForm";
 import { useStyles } from "./style";
-import {
-  goToCandidate,
-  goToCompany,
-  goToMentor,
-} from "../../Routes/coordinators";
 
 export default function SelectPage() {
   const classes = useStyles();
   const history = useHistory();
+  const { states, setters } = useContext(GlobalStateContext);
   const handleClickEnviar = () => {};
+
+  const getStep = () => {
+    return (states.candidato.email && 2) || 1;
+  };
 
   return (
     <Grid container className={classes.root}>
@@ -28,14 +30,15 @@ export default function SelectPage() {
               component="label"
               variant="h5"
             >
-              1.
+              {getStep()}.
             </Typography>
             <Typography className={classes.step} component="label" variant="h5">
-              Cadastro
+              {(getStep() === 1 && "Cadastro") || "Suas Habilidades"}
             </Typography>
           </Grid>
           <Grid item xs={12}>
-            <SignUpForm />
+            {getStep() === 2 && <ExperienceForm />}
+            {getStep() === 1 && <SignUpForm />}
           </Grid>
         </Grid>
       </Grid>
