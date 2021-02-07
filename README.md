@@ -1,5 +1,6 @@
-# Aprendiz para Todos
 
+<h1 align="center"> Aprendiz para Todos <h1>
+  
 Este projeto foi apresentado no Provi HackWoman e foi desenvolvido com o intuito de ajudar jovens de baixa renda a conseguir sua primeira oportunidade de trabalho.
 
 ## Motivação
@@ -8,13 +9,13 @@ Jovens de baixa renda não possuem acesso de qualidade a internet e possuem difi
 
 ## Etapas do Projeto
 
-### Brainstorming
+### Brainstorming :brain:
 Utilizamos a técnica de brainstorming através da ferramenta Miro para iniciar o projeto, todas as ideias sobre o nosso desafio foram explanadas para seguirmos com os próximos passos;
-### Primeiras ideias
+### Primeiras ideias :bulb:
 Construir uma plataforma para que pessoas de nível Júnior possam acessar as vagas de maneira mais eficiente. As empresas teriam uma plataforma focada  apenas nas vagas de nível Júnior, tornando a relação candidato-recrutador mais eficiente;
-### Mudança de estratégia
+### Mudança de estratégia :hammer:
 O nicho de mercado para vagas júniors é muito extenso e com apenas três dias do Hackaton, o tempo para o desenvolvimento do projeto não era suficiente.
-### Foco em um nicho de mercado.
+### Foco em um nicho de mercado :mag_right:
 Decidimos então focar no nicho de Jovem Aprendiz, reduzindo o nosso escopo e priorizando pela finalização do Projeto no tempo hábil.
 
 ## Tecnologias 
@@ -41,6 +42,15 @@ Além do cuidado da Plataforma não exigir demais do aparelho, utilizamos um lay
 
 ## Aprendizados com o Projeto
 
+## Como executar o Projeto:running:
+
+No terminal rodar os seguintes comandos:
+
+- yarn install 
+- yarn start 
+- Em outro terminal, dentro da pasta do projeto, entrar na pasta mocke.
+- Rodar yarn install
+- yarn dev
 
 ## Participantes Squad 16
 
