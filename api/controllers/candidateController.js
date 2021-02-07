@@ -1,4 +1,4 @@
-const candidate = require('../database/candidate.json')
+const candidateS = require('../models/candidateSchema')
 const fs= require('fs')
 const path= require('path')
 const bcrypt  = require('bcrypt')
@@ -9,9 +9,12 @@ let Hash = bcrypt.hashSync("1234", 10)
 const candidateController = {
 
     index: (req,res)=> {
-        res.send(candidate)
-       // res.render('index',{candidate})
-    },
+        candidateS.candidateCollection.find((error,candidate)=>{
+            if(error){
+                return res.status(500).send(error)
+            }else{ 
+                return res.status(200).send(candidate)}
+        })},
         
 
     show :(req,res)=> {
@@ -21,38 +24,26 @@ const candidateController = {
          res.send(candidato)
 
     },
-    Store: (req, res)=>{
-        let {name, email, phone, about, escolaridade,
-             instituicao, curso, area, senha} = req.body;
-       
 
-        //criando logica do ID
-        let id = candidade.lenght + 1
-
-        candidate.push({
-            id:id,
-            name: name,
-            email: email,
-            phone: phone,
-            about: about,
-            escolaridade: escolaridade,
-            insittuicao:instituicao,
-            curso: curso,
-            area:area,
-            senha:senhaC
-
-
-        });
-        candidate = JSON.stringify(candidate)
-        let senhaC = bcrypt.hashSync(senha,10)
-
-        fs.writeFileSync(path.join('database','candidate.json'),candidate)
-
-     res.send(" usuario cadastrado com sucesso")
-           
+    Store : (req,res)=>{
+        console.log(req.url)
+        const candidateBody = req.body
+        const candidate = new candidateS.candidateCollection(candidateBody)
+    
+        candidate.save((error) =>{
+            if(error){
+                return res.status(400).send(error)
+            } else {
+                return res.status(201).send(candidate)
+            }
+        })
     },
-    login: (
-        req, res) =>{
+    
+
+
+       
+    
+    login: (req, res) =>{
         const { email, senha} = req.bady
         let candidateSalvo = fs.readFileSync(candidateJson, {encoding:"utf -8"});
         candidateSalvo = JSON.parse(candidateSalvo)
