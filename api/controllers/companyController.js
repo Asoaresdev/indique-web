@@ -1,4 +1,4 @@
-const company = require('../database/company.json')
+const companyS = require('../models/companySchema')
 const fs= require('fs')
 const path= require('path')
 
@@ -15,32 +15,22 @@ const companyController = {
         
 
     },
-    Store: (req, res)=>{
-        let {name, email, phone, area, colaboradores,
-             } = req.body;
-        
 
-        //criando logica do ID
-        let id = company.lenght + 1
-
-        company.push({
-            id:id,
-            name: name,
-            email: email,
-            phone: phone,
-            area:area,
-            colaboradores: colaboradores
-
-
-        });
-        company = JSON.stringify(company)
-
-        fs.writeFileSync(path.join('database','company.json'),company)
-
-
-            // res.redirect('/')
-        
+    Store: (req,res)=>{
+        console.log(req.url)
+        const companyBody = req.body
+        const company = new companyS.companyCollection(companyBody)
+    
+        company.save((error) =>{
+            if(error){
+                return res.status(400).send(error)
+            } else {
+                return res.status(201).send(candidate)
+            }
+        })
     },
+        
+    
     login: (
         req, res) =>{
         const { email, senha} = req.bady
