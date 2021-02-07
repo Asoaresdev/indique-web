@@ -2,7 +2,7 @@ const candidate = require('../database/candidate.json')
 const fs= require('fs')
 const path= require('path')
 
-const candidato = {
+const candidateController = {
 
     index: (req,res)=> {
         res.send(candidate)
@@ -50,4 +50,4 @@ const candidato = {
     }
 }
 
-module.exports = candidato
+module.exports = candidateController

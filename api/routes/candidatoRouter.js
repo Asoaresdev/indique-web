@@ -1,6 +1,4 @@
-var express = require('express');
-const { create } = require('../controller/candidateController');
-const candidato = require('../controller/candidateController');
+const candidateController = require('../controllers/candidateController');
 var router = express.Router();
 
 /* GET users listing. */
@@ -8,7 +6,7 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.post('/api', candidato.create)
-router.post('/api', candidato.login)
+router.post('/api/candidate', candidateController.Store)
+router.post('/api/login',candidateController.login)
 
 module.exports = router;
