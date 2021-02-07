@@ -1,8 +1,9 @@
 import { makeStyles } from "@material-ui/core/styles";
+import telaselect from "../../assets/telaselect.png";
 
 export const useStyles = makeStyles((theme) => ({
   gridApresentacao: {
-    background: "#FFB800",
+    background: `url(${telaselect})`,
     height: "100vh",
     display: "flex",
     flexDirection: "column",

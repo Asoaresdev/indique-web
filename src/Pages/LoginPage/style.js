@@ -1,4 +1,6 @@
 import { makeStyles } from "@material-ui/core/styles";
+import casal from "../../assets/casal.png";
+import predios from "../../assets/predios.png";
 
 export const useStyles = makeStyles((theme) => ({
   gridApresentacao: {
@@ -15,6 +17,17 @@ export const useStyles = makeStyles((theme) => ({
   },
   root: {
     height: "100vh",
+    display: "flex",
+    justifyContent: "center",
+    flexDirection: "column",
+    alignItems: "center",
+    background: `url(${casal})`,
+    backgroundRepeat: "no-repeat",
+    backgroundPositionY: "bottom",
+  },
+  areaLogin: {
+    marginBottom: "80px",
+    fontWeight: "bold",
   },
   button: {
     borderRadius: "35px",
@@ -39,7 +52,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   opcao: {
     marginBottom: "20px",
-    color: "#696969",
+    color: theme.palette.primary.main,
     fontSize: "36px",
   },
   step: {
@@ -62,6 +75,7 @@ export const useStyles = makeStyles((theme) => ({
     width: "100%",
     display: "flex",
     justifyContent: "center",
+    margin: "10px 0",
   },
   containerForm: {
     height: "100%",
