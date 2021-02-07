@@ -5,16 +5,20 @@ import CandidatePage from "../Pages/CandidatePage";
 import CompanyPage from "../Pages/CompanyPage";
 import MentorPage from "../Pages/MentorPage";
 import DashboardPage from "../Pages/DashboardPage";
-import LoginPage from "../Pages/LoginPage"
+import LoginPage from "../Pages/LoginPage";
+import HomePage from "../Pages/HomePage";
 
 export default function Routes() {
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
-          <SelectPage />
+          <HomePage />
         </Route>
 
+        <Route exact path="/select">
+          <SelectPage />
+        </Route>
         <Route exact path="/candidate">
           <CandidatePage />
         </Route>
