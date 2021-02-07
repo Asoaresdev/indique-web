@@ -5,6 +5,7 @@ import useForm from "../../CustomHooks/useForm";
 import { useHistory } from "react-router-dom";
 import GlobalStateContext from "../../Global/GlobalStateContext";
 import { goToDashboard } from "../../Routes/coordinators";
+import api from "../../Service/api";
 
 import { useStyles } from "./style";
 
@@ -22,10 +23,16 @@ export const CompanyForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
 
-  const submitForm = (e) => {
+  const submitForm = async (e) => {
     e.preventDefault();
-    setters.setCompany(form);
     goToDashboard(history);
+    try {
+      setters.setCompany(form);
+      await api.post("/company", form);
+      goToDashboard(history);
+    } catch (error) {
+      throw error;
+    }
   };
 
   return (
