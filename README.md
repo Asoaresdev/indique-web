@@ -1,10 +1,17 @@
-# Getting Started with Create React App
+# Aprendiz para Todos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto foi apresentado no Provi Hack Woman e foi desenvolvido com o intuito de ajudar jovens de baixa renda a conseguir sua primeira oportunidade de trabalho.
 
-## Available Scripts
+## Motivação
 
-In the project directory, you can run:
+Jovens de baixa renda não possuem acesso de qualidade a internet e possuem dificuldades na navegação de plataformas como o linkedin.
+
+## Etapas do Projeto
+
+1 - Brainstorming;
+2 - Primeiras ideias;
+3 - Mudança de estratégia;
+4 - Foco em um nicho de mercado.
 
 ### `yarn start`
 
