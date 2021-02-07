@@ -62,7 +62,7 @@ export const LoginForm = () => {
             {isLoading ? (
               <CircularProgress size={24} color={"inherit"} />
             ) : (
-              "Enviar"
+              "Entrar"
             )}
           </Button>
         </div>

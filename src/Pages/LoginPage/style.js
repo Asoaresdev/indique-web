@@ -26,7 +26,7 @@ export const useStyles = makeStyles((theme) => ({
     backgroundPositionY: "bottom",
   },
   areaLogin: {
-    marginBottom: "80px",
+    margin: "20px 0 80px 0",
     fontWeight: "bold",
   },
   button: {
@@ -36,6 +36,11 @@ export const useStyles = makeStyles((theme) => ({
     fontStyle: "normal",
     fontWeight: 900,
     color: "#FFF",
+  },
+  homeButton: {
+    fontSize: "0.75rem",
+    fontWeight: 400,
+    lineHeight: 1.66,
   },
   signUp: {
     padding: "10px 30px",
