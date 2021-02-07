@@ -4,14 +4,14 @@ import { Grid, Typography, Button } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
 
 import { LoginForm } from "./LoginForm";
-import { goToHome } from "../../Routes/coordinators";
+import { goToSelect } from "../../Routes/coordinators";
 
 export default function LoginPage() {
   const classes = useStyles();
   const history = useHistory();
 
   const handleClickHome = () => {
-    goToHome(history);
+    goToSelect(history);
   };
 
   return (

@@ -2,6 +2,10 @@ export const goToCandidate = (history) => {
   history.push("/candidate");
 };
 
+export const goToSelect = (history) => {
+  history.push("/select");
+};
+
 export const goToMentor = (history) => {
   history.push("/mentor");
 };
