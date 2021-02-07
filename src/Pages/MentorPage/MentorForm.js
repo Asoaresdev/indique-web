@@ -5,6 +5,7 @@ import useForm from "../../CustomHooks/useForm";
 import { useHistory } from "react-router-dom";
 import GlobalStateContext from "../../Global/GlobalStateContext";
 import { goToDashboard } from "../../Routes/coordinators";
+import api from "../../Service/api";
 
 import { useStyles } from "./style";
 
@@ -22,10 +23,15 @@ export const MentorForm = () => {
   });
   const [isLoading, setIsLoading] = useState(false);
 
-  const submitForm = (e) => {
+  const submitForm = async (e) => {
     e.preventDefault();
-    setters.setMentor(form);
-    goToDashboard(history);
+    try {
+      setters.setMentor(form);
+      await api.post("/mentor", form);
+      goToDashboard(history);
+    } catch (error) {
+      throw error;
+    }
   };
 
   return (
