@@ -4,6 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+const database = require('./models/repository')
+database.connect()
+
 var indexRouter = require('./routes/index');
 var candidatoRouter = require('./routes/candidatoRouter');
 const mentorRouter = require ('./routes/candidatoRouter')

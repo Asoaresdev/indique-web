@@ -1,4 +1,4 @@
-const mentor = require('../database/mentor.json')
+const mentorS = require('../models/mentorSchema')
 const fs= require('fs')
 const path= require('path')
 
@@ -15,32 +15,21 @@ const mentorController = {
         
 
     },
-    Store: (req, res)=>{
-        let {name, email, area, colaboradores,
-             } = req.body;
-        
-
-        //criando logica do ID
-        let id = mentor.lenght + 1
-
-        mentor.push({
-            id:id,
-            name: name,
-            email: email,
-            phone: phone,
-            area:area,
-            colaboradores: colaboradores
-
-
-        });
-        mentor = JSON.stringify(mentor)
-
-        fs.writeFileSync(path.join('database','mentor.json'), mentor)
-
-
-            // res.redirect('/')
-        
+    Store: (req,res)=>{
+        console.log(req.url)
+        const mentorBody = req.body
+        const mentor= new mentorS.mentorCollection(mentorBody)
+    
+        candidate.save((error) =>{
+            if(error){
+                return res.status(400).send(error)
+            } else {
+                return res.status(201).send(mentor)
+            }
+        })
     },
+        
+    
     login: (
         req, res) =>{
         const { email, senha} = req.bady
