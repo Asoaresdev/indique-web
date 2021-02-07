@@ -1,6 +1,7 @@
 const candidate = require('../database/candidate.json')
 const fs= require('fs')
 const path= require('path')
+const bcrypt  = require('bcrypt')
 
 const candidateController = {
 
@@ -12,7 +13,9 @@ const candidateController = {
 
     show :(req,res)=> {
         let id = req.params.id
-        candidate.find(id)
+       let candidato  = candidate.find(candidato => candidato.id ==id
+         )
+         res.send(candidato)
 
     },
     Store: (req, res)=>{
