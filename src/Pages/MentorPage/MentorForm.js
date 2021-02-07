@@ -1,122 +1,104 @@
-import React, { useState } from 'react'
-import TextField from '@material-ui/core/TextField'
-import { Button, CircularProgress, InputAdornment, IconButton } from '@material-ui/core'
-import useForm from '../../customHooks/useForm'
-import { useHistory } from 'react-router-dom'
-import Visibility from '@material-ui/icons/Visibility';
-import VisibilityOff from '@material-ui/icons/VisibilityOff';
 
-export default function SignUpForm () {
-    //esperar API ficar pronta para nomear os inputs
-    const [form, handleInput] = useForm ({
-        name: "",
-        email: "",
-        cpf: "",
-        tel: ""
-    })
-    const [isLoading, setIsLoading] = useState(false)
-    const [ showSenha, setShowSenha ] = React.useState(false)
-    const history = useHistory()
 
-    const handleClickShowPassword = () => {
-        setShowSenha(!showSenha);
-    }
+import React, { useState, useContext } from "react";
+import TextField from "@material-ui/core/TextField";
+import { Button, CircularProgress } from "@material-ui/core";
+import useForm from "../../CustomHooks/useForm";
+import { useHistory } from "react-router-dom";
+import GlobalStateContext from "../../Global/GlobalStateContext";
 
-    const handleMouseDownPassword = (event) => {
-        event.preventDefault();
-    }
+import { useStyles } from "./style";
 
-    const submitForm = (e) => {
-        e.preventDefault()
+export const MentorForm = () => {
+  const classes = useStyles();
+  const { states, setters } = useContext(GlobalStateContext);
+  console.log(states);
 
-    }
+  //esperar API ficar pronta para nomear os inputs
+  const [form, handleInput] = useForm({
+    name: undefined,
+    email: undefined,
+    area: undefined,
+    colaboradores: undefined,
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const history = useHistory();
 
-    return (
-        <section>
-            <form>
-                <div>
-                    <TextField
-                        required
-                        autoFocus
-                        value={form.name}
-                        //   onChange={handleInput}
-                        name="name"
-                        label="Nome"
-                        placeholder="Nome e sobrenome"
-                        variant="outlined"
-                        type="text"
-                />
-                </div>
-                <div>
-                    <TextField
-                        required
-                        value={form.email}
-                        //   onChange={handleInput}
-                        name="email"
-                        label="email"
-                        placeholder="email@email.com."
-                        variant="outlined"
-                        type="email"
-                />
-                </div>
-                <div>
-                    <TextField
-                        required
-                        value={form.tel}
-                        //   onChange={handleInput}
-                        name="tel"
-                        label="Telefone contato"
-                        inputProps={{ pattern: "[0-9]{2}\-?[0-9]{4}\-?[0-9]{4}" }}
-                        placeholder="00-0000-0000"
-                        variant="outlined"
-                />
-                </div>
-                <div>
-                    <TextField
-                        id="outlined-multiline-flexible"
-                        label="Sobre você"
-                        multiline
-                        rowsMax={4}
-                        placeholder = "Fale um pouco sobre você"
-                        value={form.description}
-                        //   onChange={handleChange}
-                        variant="outlined"
-                    />
-                </div>
-                <div>
-                <TextField
-                            required
-                            value={form.password || undefined}
-                            onChange={handleInput}
-                            inputProps={{ pattern: "(.){6,}" }}
-                            name="password"
-                            id="outlined-disabled"
-                            label="Senha"
-                            placeholder="Mínimo de 6 caracteres"
-                            variant="outlined"
-                            type={showSenha ? "text" : "password"}
-                            InputProps={{ 
-                                endAdornment: (
-                                    <InputAdornment position="end">
-                                        <IconButton
-                                            aria-label="toggle password visibility"
-                                            onClick={handleClickShowPassword}
-                                            onMouseDown={handleMouseDownPassword}
-                                        >
-                                            {showSenha ? <Visibility /> : <VisibilityOff />}
-                                        </IconButton>
-                                    </InputAdornment>
-                                ),
-                            }}
-                        />
-                </div>
-                <Button 
-                type = "submit"
-                variant = "contained"
-                color= "primary">
-                {isLoading ? <CircularProgress size={24} color={"inherit"} /> : "Cadastrar"}
-                </Button>
-            </form>
-        </section>
-    )
-}
+  const submitForm = (e) => {
+    e.preventDefault();
+    setters.setCompany(form);
+  };
+
+  return (
+    <section>
+      <form className={classes.form} onSubmit={submitForm}>
+        <div>
+          <TextField
+            required
+            autoFocus
+            value={form.name}
+            onChange={handleInput}
+            name="name"
+            label="Nome do Indicador"
+            variant="outlined"
+            type="text"
+            fullWidth
+            className={classes.textField}
+          />
+        </div>
+        <div>
+          <TextField
+            required
+            value={form.email}
+            onChange={handleInput}
+            name="email"
+            label="Email"
+            placeholder="email@email.com."
+            variant="outlined"
+            type="email"
+            fullWidth
+            className={classes.textField}
+          />
+        </div>
+        <div>
+          <TextField
+            required
+            value={form.area}
+            onChange={handleInput}
+            name="area"
+            type="text"
+            label="Nível de aproximação"
+            variant="outlined"
+            fullWidth
+            className={classes.textField}
+          />
+        </div>
+        <div>
+          <TextField
+            required
+            value={form.colaboradores}
+            onChange={handleInput}
+            name="about"
+            label="Quais suas referências sobre o candidato?"
+            variant="outlined"
+            type="text"
+            multiline
+            rows={5}
+            fullWidth
+            className={classes.textField}
+            name="colaboradores"
+          />
+        </div>
+        <div className={classes.divSubmit}>
+          <Button type="submit" variant="contained" color="primary">
+            {isLoading ? (
+              <CircularProgress size={24} color={"inherit"} />
+            ) : (
+              "Enviar"
+            )}
+          </Button>
+        </div>
+      </form>
+    </section>
+  );
+};
