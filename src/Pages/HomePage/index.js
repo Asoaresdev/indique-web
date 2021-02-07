@@ -2,6 +2,9 @@ import React from "react";
 import { useStyles } from "./style";
 import { Button, Grid, Typography } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
+import CardCandidate from "../../Components/HomePage/CardCandidate";
+import CardCompany from "../../Components/HomePage/CardCompany";
+import CardMentor from "../../Components/HomePage/CardMentor";
 
 import { goToLogin } from "../../Routes/coordinators";
 
@@ -37,7 +40,13 @@ export default function HomePage() {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item className={classes.content} xs={12}></Grid>
+      <Grid item className={classes.content} xs={12}>
+        <Grid container justify="space-evenly">
+          <CardCandidate />
+          <CardCompany />
+          <CardMentor />
+        </Grid>
+      </Grid>
     </Grid>
   );
 }
