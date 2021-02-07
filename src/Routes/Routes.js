@@ -5,6 +5,7 @@ import CandidatePage from "../Pages/CandidatePage";
 import CompanyPage from "../Pages/CompanyPage";
 import MentorPage from "../Pages/MentorPage";
 import DashboardPage from "../Pages/DashboardPage";
+import LoginPage from "../Pages/LoginPage"
 
 export default function Routes() {
   return (
@@ -26,6 +27,9 @@ export default function Routes() {
         </Route>
         <Route exact path="/dashboard">
           <DashboardPage />
+        </Route>
+        <Route exact path="/login">
+          <LoginPage />
         </Route>
       </Switch>
     </BrowserRouter>
