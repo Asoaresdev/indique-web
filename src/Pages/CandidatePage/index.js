@@ -14,7 +14,7 @@ export default function SelectPage() {
   const handleClickEnviar = () => {};
 
   const getStep = () => {
-    return (states.candidato.email && 2) || 1;
+    return (states.candidate.email && 2) || 1;
   };
 
   return (
