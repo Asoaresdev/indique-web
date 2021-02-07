@@ -61,8 +61,8 @@ export default function DashboardPage() {
               )}
               {isMentor() && (
                 <>
-                  <CardCandidatesAvaillable />
                   <CardJobsAvaillable />
+                  <CardCandidatesAvaillable />
                 </>
               )}
             </Grid>

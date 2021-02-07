@@ -40,7 +40,7 @@ export const useStyles = makeStyles((theme) => ({
   opcao: {
     marginBottom: "20px",
     color: "#696969",
-    fontSize: "48px",
+    fontSize: "36px",
   },
   step: {
     color: "#494848",
