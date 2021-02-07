@@ -1,0 +1,9 @@
+[
+    {
+        "id":1,
+       "name": "Maria",
+       "email": "mariafelix@gmail.com",
+       "area": "saude",
+       "colaboradores": "Maria é muito proativa"
+    }
+ ]
