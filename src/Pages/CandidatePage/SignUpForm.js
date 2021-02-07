@@ -16,7 +16,7 @@ export const SignUpForm = () => {
     name: undefined,
     email: undefined,
     phone: undefined,
-    about: undefined,
+    password: undefined,
   });
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
@@ -73,14 +73,12 @@ export const SignUpForm = () => {
         <div>
           <TextField
             required
-            value={form.about}
+            value={form.password}
             onChange={handleInput}
             name="about"
-            label="Fale um pouco sobre você? O que você está buscando para sua próxima experiência profissional?"
+            label="Criar senha para acessar a plataforma:"
             variant="outlined"
-            type="text"
-            multiline
-            rows={5}
+            type="password"
             fullWidth
             className={classes.textField}
           />

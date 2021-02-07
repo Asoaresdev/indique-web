@@ -75,6 +75,19 @@ export const CompanyForm = () => {
         <div>
           <TextField
             required
+            value={form.password}
+            onChange={handleInput}
+            label="Crie sua senha de acesso a plataforma."
+            variant="outlined"
+            type="password"
+            fullWidth
+            className={classes.textField}
+            name="password"
+          />
+        </div>
+        <div>
+          <TextField
+            required
             value={form.colaboradores}
             onChange={handleInput}
             name="about"
@@ -88,6 +101,7 @@ export const CompanyForm = () => {
             name="colaboradores"
           />
         </div>
+
         <div className={classes.divSubmit}>
           <Button type="submit" variant="contained" color="primary">
             {isLoading ? (

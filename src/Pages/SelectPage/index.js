@@ -27,10 +27,10 @@ export default function SelectPage() {
     <Grid container className={classes.root}>
       <Grid className={classes.gridApresentacao} item xs={false} sm={6} md={7}>
         <Typography className={classes.titulo} component="p" variant="h3">
-          CONTRATE UM
+          APRENDIZ
         </Typography>
         <Typography className={classes.titulo} component="p" variant="h3">
-          JOVEM APRENDIZ
+          PARA TODOS
         </Typography>
         <Typography className={classes.subtitulo} component="p" variant="h5">
           Sua rede de apoio para o
