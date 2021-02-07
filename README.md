@@ -1,77 +1,56 @@
 # Aprendiz para Todos
 
-Este projeto foi apresentado no Provi Hack Woman e foi desenvolvido com o intuito de ajudar jovens de baixa renda a conseguir sua primeira oportunidade de trabalho.
+Este projeto foi apresentado no Provi HackWoman e foi desenvolvido com o intuito de ajudar jovens de baixa renda a conseguir sua primeira oportunidade de trabalho.
 
 ## Motivação
 
-Jovens de baixa renda não possuem acesso de qualidade a internet e possuem dificuldades na navegação de plataformas como o linkedin.
+Jovens de baixa renda não possuem acesso de qualidade a internet e possuem dificuldades na navegação de plataformas como o linkedin. A nossa plataforma contribui para conectar jovens excluídos digitalmente às empresas contratantes, com o diferencial de poder contar com pessoas que possam indicar aprendizes ao mercado de trabalho.
 
 ## Etapas do Projeto
 
-1 - Brainstorming;
-2 - Primeiras ideias;
-3 - Mudança de estratégia;
-4 - Foco em um nicho de mercado.
+### Brainstorming
+Utilizamos a técnica de brainstorming através da ferramenta Miro para iniciar o projeto, todas as ideias sobre o nosso desafio foram explanadas para seguirmos com os próximos passos;
+### Primeiras ideias
+Construir uma plataforma para que pessoas de nível Júnior possam acessar as vagas de maneira mais eficiente. As empresas teriam uma plataforma focada  apenas nas vagas de nível Júnior, tornando a relação candidato-recrutador mais eficiente;
+### Mudança de estratégia
+O nicho de mercado para vagas júniors é muito extenso e com apenas três dias do Hackaton, o tempo para o desenvolvimento do projeto não era suficiente.
+### Foco em um nicho de mercado.
+Decidimos então focar no nicho de Jovem Aprendiz, reduzindo o nosso escopo e priorizando pela finalização do Projeto no tempo hábil.
 
-### `yarn start`
+## Tecnologias 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Front end
+React e Material-ui
+### Back end
+Node.js, express, nodemon, bcrypt, jwt. (no futuro integrará com Mongo DB)
+### UX/UI
+Figma e Miro
+### Produto
+Miro e metodologias Kanbam, Canvas e matriz CSD.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Layout da Plataforma
 
-### `yarn test`
+A Plataforma possui uma estrutura leve para funcionar em smartphones que não possuem tanta evolução, com o foco principalmente em jovens de baixa renda.
+Além do cuidado da Plataforma não exigir demais do aparelho, utilizamos um layout clean e de fácil navegabilidade para atrair os jovens, indicadores e empresas.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Tela inicial
 
-### `yarn build`
+### Perfil Aprendiz
+### Perfil Indicador
+### Perfil Empresa
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Aprendizados com o Projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Participantes Squad 16
 
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Andréa Soares - Desenvolvedora de Front End
+Linkedin
+### Adrielly Félix - Desenvolvedora de Front End
+Linkedin
+### Catarina Vivacqua - Business Analyst
+Linkedin
+### Deise Maya - Desenvolvedora Back end
+Linkedin
+### Eliane Reis - Data Analytics
+Linkedin
