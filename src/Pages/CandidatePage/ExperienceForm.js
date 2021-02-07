@@ -4,13 +4,13 @@ import { Button, CircularProgress } from "@material-ui/core";
 import useForm from "../../CustomHooks/useForm";
 import { useHistory } from "react-router-dom";
 import GlobalStateContext from "../../Global/GlobalStateContext";
+import { goToDashboard } from "../../Routes/coordinators";
 
 import { useStyles } from "./style";
 
 export const ExperienceForm = () => {
   const classes = useStyles();
   const { states, setters } = useContext(GlobalStateContext);
-  console.log(states);
 
   //esperar API ficar pronta para nomear os inputs
   const [form, handleInput] = useForm({
@@ -24,10 +24,11 @@ export const ExperienceForm = () => {
 
   const submitForm = (e) => {
     e.preventDefault();
-    setters.setCandidato({
-      ...states.candidato,
+    setters.setCandidate({
+      ...states.candidate,
       ...form,
     });
+    goToDashboard(history);
   };
 
   return (

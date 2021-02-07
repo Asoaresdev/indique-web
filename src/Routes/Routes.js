@@ -3,7 +3,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import SelectPage from "../Pages/SelectPage";
 import CandidatePage from "../Pages/CandidatePage";
 import CompanyPage from "../Pages/CompanyPage";
-import MentorPage from '../Pages/MentorPage'
+import MentorPage from "../Pages/MentorPage";
+import DashboardPage from "../Pages/DashboardPage";
 
 export default function Routes() {
   return (
@@ -22,6 +23,9 @@ export default function Routes() {
         </Route>
         <Route exact path="/mentor">
           <MentorPage />
+        </Route>
+        <Route exact path="/dashboard">
+          <DashboardPage />
         </Route>
       </Switch>
     </BrowserRouter>

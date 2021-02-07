@@ -4,13 +4,13 @@ import { Button, CircularProgress } from "@material-ui/core";
 import useForm from "../../CustomHooks/useForm";
 import { useHistory } from "react-router-dom";
 import GlobalStateContext from "../../Global/GlobalStateContext";
+import { goToDashboard } from "../../Routes/coordinators";
 
 import { useStyles } from "./style";
 
 export const CompanyForm = () => {
   const classes = useStyles();
   const { states, setters } = useContext(GlobalStateContext);
-  console.log(states);
 
   //esperar API ficar pronta para nomear os inputs
   const [form, handleInput] = useForm({
@@ -25,6 +25,7 @@ export const CompanyForm = () => {
   const submitForm = (e) => {
     e.preventDefault();
     setters.setCompany(form);
+    goToDashboard(history);
   };
 
   return (

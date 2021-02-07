@@ -3,19 +3,19 @@ import GlobalStateContext from "../Global/GlobalStateContext";
 import { useState, useEffect } from "react";
 
 export default function GlobalState(props) {
-  const [candidato, setCandidato] = useState({});
+  const [candidate, setCandidate] = useState({});
   const [mentor, setMentor] = useState({});
   const [company, setCompany] = useState([]);
   // const [token, setToken] = useState("")
 
   const states = {
-    candidato,
+    candidate,
     mentor,
     company,
   };
 
   const setters = {
-    setCandidato,
+    setCandidate,
     setMentor,
     setCompany,
   };

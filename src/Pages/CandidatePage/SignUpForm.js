@@ -23,7 +23,7 @@ export const SignUpForm = () => {
 
   const submitForm = (e) => {
     e.preventDefault();
-    setters.setCandidato(form);
+    setters.setCandidate(form);
   };
 
   return (
