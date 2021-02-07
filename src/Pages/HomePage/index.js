@@ -1,23 +1,28 @@
 import React from "react";
 import { useStyles } from "./style";
 import { Button, Grid, Typography } from "@material-ui/core";
+import { useHistory } from "react-router-dom";
 
-// import { Container } from './styles';
+import { goToLogin } from "../../Routes/coordinators";
 
 export default function HomePage() {
   const classes = useStyles();
+  const history = useHistory();
+
+  const handleClickLogin = () => {
+    goToLogin(history);
+  };
+
   return (
     <Grid container className={classes.root}>
       <Grid item className={classes.header} xs={12}>
         <Grid container className={classes.headerContent}>
           <Grid item className={classes.login} xs={12}>
-            <Button className={classes.Btcadastro} variant="contained">
-              Cadastre-se
-            </Button>
             <Button
               className={classes.Btlogin}
               variant="contained"
               color="primary"
+              onClick={handleClickLogin}
             >
               Login
             </Button>

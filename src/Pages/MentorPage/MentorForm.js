@@ -18,7 +18,7 @@ export const MentorForm = () => {
     name: undefined,
     email: undefined,
     area: undefined,
-    colaboradores: undefined,
+    password: undefined,
   });
   const [isLoading, setIsLoading] = useState(false);
 
@@ -38,7 +38,7 @@ export const MentorForm = () => {
             value={form.name}
             onChange={handleInput}
             name="name"
-            label="Nome do Indicador"
+            label="Nome do Indicador:"
             variant="outlined"
             type="text"
             fullWidth
@@ -65,8 +65,8 @@ export const MentorForm = () => {
             value={form.area}
             onChange={handleInput}
             name="area"
-            type="text"
-            label="Nível de aproximação"
+            type="area"
+            label="Qual sua área de atuação?"
             variant="outlined"
             fullWidth
             className={classes.textField}
@@ -75,19 +75,17 @@ export const MentorForm = () => {
         <div>
           <TextField
             required
-            value={form.colaboradores}
+            value={form.password}
             onChange={handleInput}
-            name="colaboradores"
-            label="Quais suas referências sobre o candidato?"
+            name="password"
+            type="password"
+            label="Crie sua senha de acesso para a plataforma"
             variant="outlined"
-            type="text"
-            multiline
-            rows={5}
             fullWidth
             className={classes.textField}
-            name="colaboradores"
           />
         </div>
+
         <div className={classes.divSubmit}>
           <Button type="submit" variant="contained" color="primary">
             {isLoading ? (
