@@ -5,6 +5,7 @@ import useForm from "../../CustomHooks/useForm";
 import { useHistory } from "react-router-dom";
 import GlobalStateContext from "../../Global/GlobalStateContext";
 import { goToDashboard } from "../../Routes/coordinators";
+import api from "../../Service/api";
 
 import { useStyles } from "./style";
 
@@ -22,13 +23,18 @@ export const ExperienceForm = () => {
   const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
 
-  const submitForm = (e) => {
+  const submitForm = async (e) => {
     e.preventDefault();
     setters.setCandidate({
       ...states.candidate,
       ...form,
     });
-    goToDashboard(history);
+    try {
+      await api.post("/candidate", states.candidate);
+      goToDashboard(history);
+    } catch (error) {
+      throw error;
+    }
   };
 
   return (
