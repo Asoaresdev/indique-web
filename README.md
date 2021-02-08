@@ -46,6 +46,7 @@ Além do cuidado da Plataforma não exigir demais do aparelho, utilizamos um lay
 
 ### Perfil Indicador
 ![Indicador](https://user-images.githubusercontent.com/59628906/107165322-48f32200-6991-11eb-8fe0-74f0e34a324e.PNG)
+![Ind_new](https://user-images.githubusercontent.com/59628906/107165623-41804880-6992-11eb-9a59-8392a778f8b6.PNG)
 
 ### Perfil Empresa
 ![emp](https://user-images.githubusercontent.com/59628906/107164954-ecdbce00-698f-11eb-948e-e66f057fc7e6.PNG)
