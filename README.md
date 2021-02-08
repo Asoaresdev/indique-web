@@ -52,6 +52,9 @@ Além do cuidado da Plataforma não exigir demais do aparelho, utilizamos um lay
 ![emp](https://user-images.githubusercontent.com/59628906/107164954-ecdbce00-698f-11eb-948e-e66f057fc7e6.PNG)
 ![Empee](https://user-images.githubusercontent.com/59628906/107165730-991eb400-6992-11eb-9d81-fabc9b05ee8a.PNG)
 
+### Tela de login (ficará acessível após o cadastro de cada perfil)
+
+
 ## Aprendizados com o Projeto
 
 - Criar uma plataforma que atingisse nosso público alvo: Menores aprendizes excluídos digitalmente em busca de sua primeira oportunidade de emprego;
