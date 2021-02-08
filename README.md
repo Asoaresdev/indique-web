@@ -90,12 +90,17 @@ São três de cadastro e uma de login
 ## Participantes Squad 16
 
 - Andréa Soares - Desenvolvedora de Front End
+#### https://www.linkedin.com/in/andrea-rsoares/
 
 - Adrielly Félix - Desenvolvedora de Front End
+#### https://www.linkedin.com/in/adriellyfxcosta/
 
 - Catarina Vivacqua - Business Analyst
+#### https://www.linkedin.com/in/catarinaravagnani/
 
 - Deise Maya - Desenvolvedora Back end
+#### https://www.linkedin.com/in/deisemaya/
 
 - Eliane Reis - Data Analytics
+#### https://www.linkedin.com/in/eliane-a-reis/
 
