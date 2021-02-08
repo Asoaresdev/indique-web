@@ -41,6 +41,7 @@ Além do cuidado da Plataforma não exigir demais do aparelho, utilizamos um lay
 
 ### Perfil Aprendiz
 ![Cadastro2](https://user-images.githubusercontent.com/59628906/107164316-51495e00-698d-11eb-86d3-3dfc68ba5261.PNG)
+![Cadastro3](https://user-images.githubusercontent.com/59628906/107164477-f2381900-698d-11eb-96c8-4ac329a620e5.PNG)
 
 ### Perfil Indicador
 ### Perfil Empresa
