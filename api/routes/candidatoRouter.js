@@ -7,6 +7,7 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
+router.get('/api/index', candidateController.index)
 router.post('/api/candidate', candidateController.Store)
 router.post('/api/login',candidateController.login)
 

@@ -5,7 +5,7 @@ const path= require('path')
 const mentorController = {
 
     index: (req,res)=> {
-        res.send(company)
+        res.send(mentorS)
        // res.render('index',{candidate})
     },
         

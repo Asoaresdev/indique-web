@@ -3,6 +3,9 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+let cors = require('cors')
+require("dotenv-safe").config();
+const jwt = require('jsonwebtoken');
 
 const database = require('./models/repository')
 database.connect()
@@ -23,16 +26,17 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(cors())
 
 app.use('/', indexRouter);
 app.use('/', candidatoRouter);
-app.use('/', mentorRouter);
+app.use('/api', mentorRouter);
 app.use('/',companyRouter)
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
+ //catch 404 and forward to error handler
+/*app.use(function(req, res, next) {
   next(createError(404));
-});
+});*/
 
 // error handler
 app.use(function(err, req, res, next) {
