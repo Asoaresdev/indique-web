@@ -45,8 +45,15 @@ Além do cuidado da Plataforma não exigir demais do aparelho, utilizamos um lay
 
 ## Aprendizados com o Projeto
 
-O maior desafio para a construção da nossa solução foi criar algo que atingisse quem realmente precisa ter alcance à essa oportunidade e que não tem tanto acesso à tecnologia:
-A gestao de tempo também foi um desafio, uma plataforma neste formato geralmente leva mais tempo para ser desenvolvida.
+- Criar uma plataforma que atingisse nosso público alvo: Menores aprendizes excluídos digitalmente em busca de sua primeira oportunidade de emprego;
+- Realizar a gestão do tempo de forma assertiva diante de tantas tarefas para conclusão em apenas três dias;
+- A utilização de ferramentas desconhecidas até o momento;
+- Trabalho em equipe de forma remota;
+- Refatorar o código em duas horas mesmo que tenha demorado dois dias para ser criado;
+- A importância de um contrato antes de iniciar a codificação;
+- Aprender a codar de forma limpa e legível;
+- Aprender um pouco mais de todas as áreas envolvidas, front, back, UX/UI e produto;
+- Superação de limites.
 
 ## Como executar o Projeto:running:
 
@@ -60,10 +67,11 @@ No terminal rodar os seguintes comandos:
 - yarn dev
 
 ### Back end
+- Instalar o Mongo DB
 - No terminal na pasta API rodar o comando npm install
 - Rodar "node ./bin/www"
 - No browser acessar localhost:9000
-#### A API tem 4 endpoints:
+#### A API tem 4 endpoints (a conexão com o front está em construção, sugerimos rodar com mock)
 São três de cadastro e uma de login
 - Candidato = localhost:/9000/api/candidate
 - Empresa = localhost:/9000/api/company
