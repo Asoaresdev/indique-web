@@ -16,7 +16,7 @@ const companyController = {
 
     },
 
-    Store: (req,res)=>{
+    Store: (req, res, next)=>{
         console.log(req.url)
         const companyBody = req.body
         const company = new companyS.companyCollection(companyBody)
@@ -25,7 +25,7 @@ const companyController = {
             if(error){
                 return res.status(400).send(error)
             } else {
-                return res.status(201).send(candidate)
+                return res.status(201).send(company)
             }
         })
     },
