@@ -37,7 +37,7 @@ A Plataforma possui uma estrutura leve para funcionar em smartphones que não po
 Além do cuidado da Plataforma não exigir demais do aparelho, utilizamos um layout clean e de fácil navegabilidade para atrair os jovens, indicadores e empresas.
 
 ### Tela inicial
-<img src=”caminho até a imagem”>
+![inicio1](https://user-images.githubusercontent.com/59628906/107164106-3e825980-698c-11eb-90ea-b494597d31d9.PNG)
 
 ### Perfil Aprendiz
 ### Perfil Indicador
