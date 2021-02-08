@@ -1,7 +1,10 @@
 const companyS = require('../models/companySchema')
+const moongoose = require('mongoose')
 const fs= require('fs')
 const path= require('path')
-
+const bcrypt =(require('bcrypt'))
+jwt = require('jsonwebtoken')
+let compa
 const companyController = {
 
     index: (req,res)=> {
@@ -15,8 +18,9 @@ const companyController = {
         
 
     },
+    store: ()
 
-    Store: (req, res, next)=>{
+   Store: (req, res, next)=>{
         console.log(req.url)
         const companyBody = req.body
         const company = new companyS.companyCollection(companyBody)
