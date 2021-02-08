@@ -14,7 +14,7 @@ Jovens de baixa renda não possuem acesso de qualidade a internet e possuem difi
 ### Brainstorming :brain:
 Utilizamos a técnica de brainstorming através da ferramenta Miro para iniciar o projeto, todas as ideias sobre o nosso desafio foram explanadas para seguirmos com os próximos passos;
 ### Primeiras ideias :bulb:
-Construir uma plataforma para que pessoas de nível Júnior possam acessar as vagas de maneira mais eficiente. As empresas teriam uma plataforma focada  apenas nas vagas de nível Júnior, tornando a relação candidato-recrutador mais eficiente;
+Construir uma plataforma para que pessoas de nível Júnior possam acessar as vagas de maneira mais eficiente. As empresas contam com uma plataforma focada  apenas nas vagas de nível Júnior, tornando a relação candidato-recrutador mais eficiente;
 ### Mudança de estratégia :hammer:
 O nicho de mercado para vagas júniors é muito extenso e com apenas três dias do Hackaton, o tempo para o desenvolvimento do projeto não era suficiente.
 ### Foco em um nicho de mercado :mag_right:
@@ -23,13 +23,13 @@ Decidimos então focar no nicho de Jovem Aprendiz, reduzindo o nosso escopo e pr
 ## Tecnologias 
 
 ### Front end
-React e Material-ui
+- React e Material-ui
 ### Back end
-Node.js, express, nodemon, bcrypt, jwt. (no futuro integrará com Mongo DB)
+- Node.js, express, nodemon, bcrypt, jwt. (no futuro integrará com Mongo DB)
 ### UX/UI
-Figma e Miro
+- Figma e Miro
 ### Produto
-Miro e metodologias Kanbam, Canvas e matriz CSD.
+- Miro e metodologias Kanbam, Canvas e matriz CSD.
 
 ## Layout da Plataforma
 
@@ -57,11 +57,11 @@ Além do cuidado da Plataforma não exigir demais do aparelho, utilizamos um lay
 
 ## Aprendizados com o Projeto
 
-- Criar uma plataforma que atingisse nosso público alvo: Menores aprendizes excluídos digitalmente em busca de sua primeira oportunidade de emprego;
+- Criar uma plataforma que atingisse nosso público alvo: Jovens aprendizes excluídos digitalmente em busca de sua primeira oportunidade de emprego;
 - Realizar a gestão do tempo de forma assertiva diante de tantas tarefas para conclusão em apenas três dias;
 - A utilização de ferramentas desconhecidas até o momento;
 - Trabalho em equipe de forma remota;
-- Refatorar o código em duas horas mesmo que tenha demorado dois dias para ser criado;
+- Refatorar o código em duas horas, mesmo que tenha demorado dois dias para ser criado;
 - A importância de um contrato antes de iniciar a codificação;
 - Aprender a codar de forma limpa e legível;
 - Aprender um pouco mais de todas as áreas envolvidas, front, back, UX/UI e produto;
@@ -84,7 +84,7 @@ No terminal rodar os seguintes comandos:
 - Rodar "node ./bin/www"
 - No browser acessar localhost:9000
 #### A API tem 4 endpoints (a conexão com o front está em construção, sugerimos rodar com mock)
-São três de cadastro e uma de login
+São três de cadastro e uma de login:
 - Candidato = localhost:/9000/api/candidate
 - Empresa = localhost:/9000/api/company
 - Indicador = localhost:9000/api/mentor
