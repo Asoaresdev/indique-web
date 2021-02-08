@@ -53,7 +53,7 @@ Além do cuidado da Plataforma não exigir demais do aparelho, utilizamos um lay
 ![Empee](https://user-images.githubusercontent.com/59628906/107165730-991eb400-6992-11eb-9d81-fabc9b05ee8a.PNG)
 
 ### Tela de login (ficará acessível após o cadastro de cada perfil)
-
+![Logg](https://user-images.githubusercontent.com/59628906/107166530-0a5f6680-6995-11eb-9cdc-0ff61180b3f0.PNG)
 
 ## Aprendizados com o Projeto
 
@@ -92,18 +92,18 @@ São três de cadastro e uma de login
 
 ## Participantes Squad 16
 
-- Andréa Soares - Desenvolvedora de Front End
-#### https://www.linkedin.com/in/andrea-rsoares/
+#### Andréa Soares - Desenvolvedora de Front End
+- https://www.linkedin.com/in/andrea-rsoares/
 
-- Adrielly Félix - Desenvolvedora de Front End
-#### https://www.linkedin.com/in/adriellyfxcosta/
+#### Adrielly Félix - Desenvolvedora de Front End
+- https://www.linkedin.com/in/adriellyfxcosta/
 
-- Catarina Vivacqua - Business Analyst
-#### https://www.linkedin.com/in/catarinaravagnani/
+#### Catarina Vivacqua - Business Analyst
+- https://www.linkedin.com/in/catarinaravagnani/
 
-- Deise Maya - Desenvolvedora Back end
-#### https://www.linkedin.com/in/deisemaya/
+#### Deise Maya - Desenvolvedora Back end
+- https://www.linkedin.com/in/deisemaya/
 
-- Eliane Reis - Data Analytics
-#### https://www.linkedin.com/in/eliane-a-reis/
+#### Eliane Reis - Data Analytics
+- https://www.linkedin.com/in/eliane-a-reis/
 
