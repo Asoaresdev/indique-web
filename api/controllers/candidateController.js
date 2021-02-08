@@ -45,9 +45,8 @@ const candidateController = {
     
     login: (req, res) =>{
         const { email, senha} = req.bady
-        let candidateSalvo = fs.readFileSync(candidateJson, {encoding:"utf -8"});
-        candidateSalvo = JSON.parse(candidateSalvo)
-        if(email!= candidateSalvo.email){
+        
+        if(email!= body.email){
             return res.send( ' usuario Invalido')
         }
         if(!bcrypt.compareSync(senha , candidateSalvo.senha)){

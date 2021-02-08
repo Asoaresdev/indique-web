@@ -4,7 +4,7 @@ const fs= require('fs')
 const path= require('path')
 const bcrypt =(require('bcrypt'))
 jwt = require('jsonwebtoken')
-require("")
+
 
 let compa
 const companyController = {
@@ -20,12 +20,13 @@ const companyController = {
         
 
     },
-    store: ()
+    
 
-   Store: (req, res, next)=>{
+   Store:async (req, res, )=>{
         console.log(req.url)
-        const companyBody = req.body
-        const company = new companyS.companyCollection(companyBody)
+        const body = req.body
+        body.senha = await bcrypt.hash(body.senha,12)
+        const company = new companyS.companyCollection(body)
     
         company.save((error) =>{
             if(error){
@@ -37,10 +38,21 @@ const companyController = {
     },
         
     
-    login: (
-        req, res) =>{
+    login: ( req, res) =>{
+        
         const { email, senha} = req.bady
-    }
+        
+    
+        if(email!= body.email){
+            return res.send( ' usuario Invalido')
+        }
+        if(!bcrypt.compareSync(senha , body.senha)){
+            return res.send("senha invalida")
+        }
+
+    }   
 }
+    
+
 
 module.exports = companyController

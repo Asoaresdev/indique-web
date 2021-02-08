@@ -4,6 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 let cors = require('cors')
+require("dotenv-safe").config();
+const jwt = require('jsonwebtoken');
 
 const database = require('./models/repository')
 database.connect()
